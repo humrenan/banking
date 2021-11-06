@@ -9,3 +9,9 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+Banking.create_user(%{
+  name: "Maria",
+  email: "maria@email.com",
+  password: "123456"
+})
