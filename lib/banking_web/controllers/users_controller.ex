@@ -1,4 +1,4 @@
-defmodule Banking.UsersController do
+defmodule BankingWeb.UsersController do
   use BankingWeb, :controller
 
   alias Banking
@@ -9,7 +9,7 @@ defmodule Banking.UsersController do
   def create(conn, params) do
     with {:ok, %User{} = user} <- Banking.create_user(params) do
       conn
-      |> put_status(:created)
+      |> put_status(200)
       |> render("create.json", user: user)
     end
   end
