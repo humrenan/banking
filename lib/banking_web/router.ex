@@ -8,7 +8,7 @@ defmodule BankingWeb.Router do
   scope "/api", BankingWeb do
     pipe_through :api
 
-    post "/users", UsersController, :create
+    post "/users/create", UsersController, :create
   end
 
   # Enables the Swoosh mailbox preview in development.
