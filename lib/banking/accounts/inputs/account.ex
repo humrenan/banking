@@ -2,7 +2,6 @@ defmodule Banking.Accounts.Inputs.Account do
   @moduledoc """
   Input parameters for account
   """
-  
   use Ecto.Schema
   import Ecto.Changeset
   alias Banking.Users.Inputs.User

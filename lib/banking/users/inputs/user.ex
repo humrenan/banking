@@ -19,6 +19,8 @@ defmodule Banking.Users.Inputs.User do
     field :password, :string, virtual: true
     field :password_hash, :string
     has_one :account, Account
+
+    timestamps()
   end
 
   def changeset(model \\ %__MODULE__{}, params) do
