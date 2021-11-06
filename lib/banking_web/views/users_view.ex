@@ -23,11 +23,3 @@ defmodule BankingWeb.UsersView do
     }
   end
 end
-
-# %{
-#   user: %User{
-#     account: %Account{id: account_id, balance: balance},
-#     id: id,
-#     name: name
-#   }
-# }
