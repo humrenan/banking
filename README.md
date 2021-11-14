@@ -1,19 +1,108 @@
-# Banking
+# BankingApi
 
-To start your Phoenix server:
+A banking Api which is possible create accounts for users and make basic bankinkg operations: `:deposit`, `:withdraw` and `:transaction`  
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+ 
+# setup
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+To run this project you need first to have a Postgres container running on port 5432. We embed a docker-compose configuration to ease setting up the environment.  
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+```sh
+# Run this to have a database on 5432
+    docker-compose up -d
 
-## Learn more
+```
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Start the project: 
+
+```sh
+# On the root folder:
+    mix setup
+```
+
+---
+## API
+
+All APIs requests are under `/api` scope.
+
+
+
+## Create user
+Creates an User + Account
+
+### Request
+`POST /users/create`
+
+```json
+// Example
+{
+	"name": "Jimi Hendrix",
+	"email": "jimihendrix@email.com",
+	"password": "Kb0ySi1C",
+}
+```
+
+---
+## Deposit
+Deposits to an existing account.
+
+
+### Request
+  `POST /accounts/:id/deposit/`
+
+
+```json
+// Body
+{
+  "value": "10"
+}
+```
+---
+## Withdraw
+Withdraws to an existing account.
+
+
+### Request
+  `POST /accounts/:id/withdraw/` 
+
+
+```json
+// Body
+{
+  "value": "10"
+}
+```
+
+---
+## Transaction
+Transaction between existing accounts.
+
+
+### Request
+  `POST /accounts/transaction/` 
+
+
+```json
+// Body
+{
+	"from_id": "3ab097dd-2d7a-4c16-808c-7b3948d4c209",
+	"to_id": "aee21185-bc3f-4684-98c4-fda505adb0e5",
+	"value": "10"
+}
+```
+---
+
+## List Users
+List all users
+
+### Request
+
+`GET /users/list`
+
+
+```json
+// Body
+{
+  
+}
+```
