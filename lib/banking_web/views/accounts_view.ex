@@ -31,29 +31,5 @@ defmodule BankingWeb.AccountsView do
     }
   end
 
-  def render("users.json", %{users: users}) do
-    %{accounts: render_many(users, __MODULE__, "acc.json")}
-  end
 
-  def render("acc.json", %{user: %User{
-  account: %Account{
-    id: acc_id,
-    balance: balance},
-    id: id,
-    name: name}
-  }) do
-    %{      user: %{id: id, name: name,
-    account: %{
-      balance: balance,
-      id: acc_id
-    }
-  }
-}
-  end
-
-  def render("acc.json", %{user: user} )do
-  %{user: user}
-  end
-
-
-  end
+end

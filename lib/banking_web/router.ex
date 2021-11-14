@@ -9,13 +9,12 @@ defmodule BankingWeb.Router do
     pipe_through :api
 
     post "/users/create", UsersController, :create
+    get "/users/list", UsersController, :list
 
     post "/accounts/deposit", AccountsController, :deposit
     post "/accounts/transaction", AccountsController, :transaction
     post "/accounts/withdraw", AccountsController, :withdraw
 
-
-    get "/accounts/list", AccountsController, :list
   end
 
   # Enables the Swoosh mailbox preview in development.

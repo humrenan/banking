@@ -31,11 +31,5 @@ defmodule BankingWeb.AccountsController do
     end
   end
 
-  def list(conn, %{}) do
-    users = Banking.list()
-
-    conn
-    |> put_status(:ok)
-    |> render("users.json", %{users: users})
-  end
+ 
 end

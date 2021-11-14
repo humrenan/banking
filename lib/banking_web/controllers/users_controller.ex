@@ -13,4 +13,12 @@ defmodule BankingWeb.UsersController do
       |> render("create.json", user: user)
     end
   end
+
+  def list(conn, %{}) do
+    users = Banking.list()
+
+    conn
+    |> put_status(:ok)
+    |> render("users.json", %{users: users})
+  end
 end
