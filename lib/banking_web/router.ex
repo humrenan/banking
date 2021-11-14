@@ -11,9 +11,9 @@ defmodule BankingWeb.Router do
     post "/users/create", UsersController, :create
     get "/users/list", UsersController, :list
 
-    post "/accounts/deposit", AccountsController, :deposit
+    post "/accounts/:id/deposit", AccountsController, :deposit
+    post "/accounts/:id/withdraw", AccountsController, :withdraw
     post "/accounts/transaction", AccountsController, :transaction
-    post "/accounts/withdraw", AccountsController, :withdraw
 
   end
 
