@@ -1,3 +1,8 @@
+
+![](https://img.shields.io/badge/Elixir-v1.12.3-4B275F?style=for-the-badge&logo=elixir&logoColor=purple
+) 
+![](https://img.shields.io/badge/Erlang-OTP/24-4B275F?style=for-the-badge&logo=erlang&logoColor=red
+) 
 # BankingApi
 
 A banking Api which is possible create accounts for users and make basic bankinkg operations: `:deposit`, `:withdraw` and `:transaction`  
