@@ -5,7 +5,7 @@
 ) 
 # BankingApi
 
-A banking Api which is possible create accounts for users and make basic bankinkg operations: `:deposit`, `:withdraw` and `:transaction`  
+A banking Api which is possible create accounts for users and make basic banking operations: `:deposit`, `:withdraw` and `:transaction`  
 
  
 # setup
