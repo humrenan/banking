@@ -30,6 +30,4 @@ defmodule BankingWeb.AccountsView do
       }
     }
   end
-
-
 end

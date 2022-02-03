@@ -8,5 +8,5 @@ defmodule Banking do
   defdelegate deposit(params), to: Deposit, as: :call
   defdelegate withdraw(params), to: Withdraw, as: :call
 
-   defdelegate list, to: List, as: :call
+  defdelegate list, to: List, as: :call
 end

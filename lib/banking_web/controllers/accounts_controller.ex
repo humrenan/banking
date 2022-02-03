@@ -30,6 +30,4 @@ defmodule BankingWeb.AccountsController do
       |> render("transaction.json", transaction: transaction)
     end
   end
-
- 
 end
