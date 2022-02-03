@@ -7,7 +7,8 @@ defmodule BankingWeb.UsersView do
         user: %User{
           account: %Account{id: account_id, balance: balance},
           id: id,
-          name: name
+          name: name,
+          email: email
         }
       }) do
     %{
@@ -15,6 +16,7 @@ defmodule BankingWeb.UsersView do
       user: %{
         id: id,
         name: name,
+        email: email,
         account: %{
           id: account_id,
           balance: balance
@@ -24,11 +26,11 @@ defmodule BankingWeb.UsersView do
   end
 
   def render("users.json", %{users: users}) do
-    %{users: render_many(users, __MODULE__, "acc.json" )}
+    %{users: render_many(users, __MODULE__, "acc.json")}
   end
 
   def render("acc.json", %{
-    users: %User{
+        users: %User{
           account: %Account{
             id: acc_id,
             balance: balance
@@ -48,6 +50,4 @@ defmodule BankingWeb.UsersView do
       }
     }
   end
-
-
 end
