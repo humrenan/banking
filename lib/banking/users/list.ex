@@ -5,6 +5,8 @@ defmodule Banking.Users.List do
   alias Banking.Users.Inputs.User
 
   def call do
-    Repo.all(User) |> Repo.preload([:account])
+    User
+    |> Repo.all()
+    |> Repo.preload([:account])
   end
 end
