@@ -1,7 +1,8 @@
 defmodule Banking.Users.List do
+  @moduledoc """
+  List users
+  """
   alias Banking.Repo
-
-  alias Banking.Accounts.Inputs.Account
   alias Banking.Users.Inputs.User
 
   def call do
