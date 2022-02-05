@@ -19,6 +19,6 @@ defmodule BankingWeb.UsersController do
 
     conn
     |> put_status(:ok)
-    |> render("users.json", %{users: users})
+    |> render("users.json", %{users: [users]})
   end
 end
