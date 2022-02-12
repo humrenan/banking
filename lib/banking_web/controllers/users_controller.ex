@@ -14,7 +14,7 @@ defmodule BankingWeb.UsersController do
     end
   end
 
-  def list(conn, %{}) do
+  def list(conn, _opts) do
     users = Banking.list()
 
     conn
